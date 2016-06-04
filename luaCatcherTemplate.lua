@@ -11,8 +11,8 @@ Your 3rd Pokemon needs to be Sleep Powder / Hypnosis.
 
 function onPathAction()
 	-- [[ Change the following as needed]] --
-
-	if isPokemonUsable(1) and isPokemonUsable(2) and isPokemonUsable(3) then
+	
+	if isPokemonUsable(1) and ( getRemainingPowerPoints(2, "False Swipe") > 0 ) and ( getRemainingPowerPoints(3, "Sleep Powder") > 0 ) then
 		if getMapName() == "Pokecenter Viridian" then
 			moveToMap("Viridian City")
 		elseif getMapName() == "Viridian City" then
